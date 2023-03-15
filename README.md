@@ -1,26 +1,33 @@
-# MINERVA
-Meandering In Networks of Entities to Reach Verisimilar Answers 
+# myMINERVA
 
-Code and models for the paper [Go for a Walk and Arrive at the Answer - Reasoning over Paths in Knowledge Bases using Reinforcement Learning](https://arxiv.org/abs/1711.05851)
+Meandering In Networks of Entities to Reach Verisimilar Answers
 
-MINERVA is a RL agent which answers queries in a knowledge graph of entities and relations. Starting from an entity node, MINERVA learns to navigate the graph conditioned on the input query till it reaches the answer entity. For example, give the query, (Colin Kaepernick, PLAYERHOMESTADIUM, ?), MINERVA takes the path in the knowledge graph below as highlighted. Note: Only the solid edges are observed in the graph, the dashed edges are unobsrved.
-![gif](https://github.com/shehzaadzd/MINERVA/blob/master/images/new.gif)
- _gif courtesy of [Bhuvi Gupta](https://www.linkedin.com/in/bhuvigupta/?originalSubdomain=in)_ 
+Code and models for Central South University undergraduate thesis
+
+Reference: [Go for a Walk and Arrive at the Answer - Reasoning over Paths in Knowledge Bases using Reinforcement Learning](https://arxiv.org/abs/1711.05851)
+
+Datasets: [OpenBG Benchmark：大规模开放数字商业知识图谱评测基准](https://tianchi.aliyun.com/dataset/122271)
 
 
 
-## Requirements
-To install the various python dependencies (including tensorflow)
-```
-pip install -r requirements.txt
+## Build
+
+To set up the envirnment and install the various python dependencies (including tensorflow)
+
+```shell
+sh build.sh
 ```
 
 ## Training
+
 Training MINERVA is easy!. The hyperparam configs for each experiments are in the [configs](https://github.com/shehzaadzd/MINERVA/tree/master/configs) directory. To start a particular experiment, just do
+
 ```
 sh run.sh configs/${dataset}.sh
 ```
+
 where the `${dataset}.sh` is the name of the config file. For example, 
+
 ```
 sh run.sh configs/countries_s3.sh
 ```
@@ -28,16 +35,20 @@ sh run.sh configs/countries_s3.sh
 ## Testing
 
 We are also releasing pre-trained models so that you can directly use MINERVA for query answering. They are located in the  [saved_models](https://github.com/shehzaadzd/MINERVA/tree/master/saved_models) directory. To load the model, set the ```load_model``` to 1 in the config file (default value 0) and ```model_load_dir``` to point to the saved_model. For example in [configs/countries_s2.sh](https://github.com/shehzaadzd/MINERVA/blob/master/configs/countries_s2.sh), make
+
 ```
 load_model=1
 model_load_dir="saved_models/countries_s2/model.ckpt"
 ```
+
 ## Output
+
 The code outputs the evaluation of MINERVA on the datasets provided. The metrics used for evaluation are Hits@{1,3,5,10,20} and MRR (which in the case of Countries is AUC-PR). Along with this, the code also outputs the answers MINERVA reached in a file.
 
 ## Code Structure
 
 The structure of the code is as follows
+
 ```
 Code
 ├── Model
@@ -72,9 +83,12 @@ kinship
     └── Vocab
             ├── entity_vocab.json
             └── relation_vocab.json
-``` 
+```
+
 ## Citation
+
 If you use this code, please cite our paper
+
 ```
 @inproceedings{minerva,
   title = {Go for a Walk and Arrive at the Answer: Reasoning Over Paths in Knowledge Bases using Reinforcement Learning},
