@@ -12,9 +12,15 @@ Datasets: [OpenBG Benchmark：大规模开放数字商业知识图谱评测基�
 
 ## Build
 
+While using Ubuntu, changing dpkg reconfiguration first
+
+```shell
+dpkg-reconfigure dash	# chose "no"
+```
+
 To set up the envirnment and install the various python dependencies (including tensorflow)
 
-```[]shell
+```shell
 sh build.sh -x
 ```
 
@@ -24,13 +30,13 @@ Supporting automatic environment setup while using vm from [featurize](https://f
 
 Training MINERVA is easy!. The hyperparam configs for each experiments are in the [configs](https://github.com/shehzaadzd/MINERVA/tree/master/configs) directory. To start a particular experiment, just do
 
-```
+```shell
 sh run.sh configs/${dataset}.sh
 ```
 
 where the `${dataset}.sh` is the name of the config file. For example, 
 
-```
+```shell
 sh run.sh configs/countries_s3.sh
 ```
 
@@ -38,7 +44,7 @@ sh run.sh configs/countries_s3.sh
 
 We are also releasing pre-trained models so that you can directly use MINERVA for query answering. They are located in the  [saved_models](https://github.com/shehzaadzd/MINERVA/tree/master/saved_models) directory. To load the model, set the ```load_model``` to 1 in the config file (default value 0) and ```model_load_dir``` to point to the saved_model. For example in [configs/countries_s2.sh](https://github.com/shehzaadzd/MINERVA/blob/master/configs/countries_s2.sh), make
 
-```
+```shell
 load_model=1
 model_load_dir="saved_models/countries_s2/model.ckpt"
 ```
