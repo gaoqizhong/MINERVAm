@@ -32,8 +32,14 @@ pip install tensorflow==2.11.0
 pip install networkx==2.0
 
 # install numpy
-pip install numpy==1.13.3
+pip uninstall numpy
+pip install numpy
 
 # install tqdm
 pip install tqdm==4.19.4
 
+# test environment
+conda --version
+nvidia-smi
+nvcc -V
+python3 tensorflow_gpu_check.py
