@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# update code
+git pull origin main
+
 # install Anaconda3
 # wget -P /home/featurize/work https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
 bash /home/featurize/work/Anaconda3-2020.02-Linux-x86_64.sh
