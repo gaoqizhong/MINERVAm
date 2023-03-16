@@ -15,7 +15,7 @@ Datasets: [OpenBG Benchmark：大规模开放数字商业知识图谱评测基�
 To set up the envirnment and install the various python dependencies (including tensorflow)
 
 ```[]shell
-sh build.sh
+sh build.sh -x
 ```
 
 Supporting automatic environment setup while using vm from [featurize](https://featurize.cn/) (RTX 3080), else changing the file path and software version to which you supported in the above file.
