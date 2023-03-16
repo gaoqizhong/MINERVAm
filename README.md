@@ -15,7 +15,7 @@ Datasets: [OpenBG Benchmark：大规模开放数字商业知识图谱评测基�
 While using Ubuntu, changing dpkg reconfiguration first
 
 ```shell
-dpkg-reconfigure dash	# chose "no"
+sudo dpkg-reconfigure dash	# choose "no"
 ```
 
 To set up the envirnment and install the various python dependencies (including tensorflow)
