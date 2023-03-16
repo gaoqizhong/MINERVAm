@@ -8,23 +8,28 @@ Reference: [Go for a Walk and Arrive at the Answer - Reasoning over Paths in Kno
 
 Datasets: [OpenBG Benchmark：大规模开放数字商业知识图谱评测基准](https://tianchi.aliyun.com/dataset/122271)
 
-
+VM address:  [featurize](https://featurize.cn/)(RTX 3080)
 
 ## Build
 
-While using Ubuntu, changing dpkg reconfiguration first
+While using Ubuntu os, change dpkg reconfiguration first
 
 ```shell
-sudo dpkg-reconfigure dash	# choose "no"
+sudo dpkg-reconfigure dash	# select "no" in the popover
 ```
 
-To set up the envirnment and install the various python dependencies (including tensorflow)
+Create python environment by Anaconda
+
+```shell
+conda create --name python2.7 python=2.7 -y
+conda activate python2.7
+```
+
+Install the various python dependencies (including tensorflow)
 
 ```shell
 sh build.sh -x
 ```
-
-Supporting automatic environment setup while using vm from [featurize](https://featurize.cn/) (RTX 3080), else changing the file path and software version to which you supported in the above file.
 
 ## Training
 
@@ -91,17 +96,4 @@ kinship
     └── Vocab
             ├── entity_vocab.json
             └── relation_vocab.json
-```
-
-## Citation
-
-If you use this code, please cite our paper
-
-```
-@inproceedings{minerva,
-  title = {Go for a Walk and Arrive at the Answer: Reasoning Over Paths in Knowledge Bases using Reinforcement Learning},
-  author = {Das, Rajarshi and Dhuliawala, Shehzaad and Zaheer, Manzil and Vilnis, Luke and Durugkar, Ishan and Krishnamurthy, Akshay and Smola, Alex and McCallum, Andrew},
-  booktitle = {ICLR},
-  year = 2018
-}
 ```
