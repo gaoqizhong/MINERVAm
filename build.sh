@@ -12,4 +12,3 @@ conda install scipy -y
 
 # install & test tensorflow-gpu
 conda install tensorflow-gpu==1.3.0 -y
-python /home/featurize/work/tensorflow_gpu_check.py
