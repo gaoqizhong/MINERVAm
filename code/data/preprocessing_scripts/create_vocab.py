@@ -12,9 +12,9 @@ import os
 #
 # dir = parsed['data_input_dir']
 # vocab_dir = parsed['vocab_dir']
-root_dir = '../../../'
-vocab_dir = root_dir+'datasets/Split-scale-test-v01/1-9/vocab/'
-dir = root_dir+'datasets/Split-scale-test-v01/1-9/'
+root_dir = ''
+vocab_dir = root_dir+'datasets/split-scale-test-v01/1-9/vocab/'
+dir = root_dir+'datasets/split-scale-test-v01/1-9/'
 
 os.makedirs(vocab_dir)
 
@@ -32,7 +32,7 @@ relation_vocab['UNK'] = len(relation_vocab)
 entity_counter = len(entity_vocab)
 relation_counter = len(relation_vocab)
 
-for f in ['train.txt', 'dev.txt', 'test.txt']:
+for f in ['train.txt', 'dev.txt', 'test.txt', 'graph.txt']:
     with open(dir+f) as raw_file:
         csv_file = csv.reader(raw_file, delimiter='\t')
         for line in csv_file:

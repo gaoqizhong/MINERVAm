@@ -36,13 +36,13 @@ sh build.sh -x
 Training MINERVA is easy!. The hyperparam configs for each experiments are in the [configs](https://github.com/shehzaadzd/MINERVA/tree/master/configs) directory. To start a particular experiment, just do
 
 ```shell
-sh run.sh configs/${dataset}.sh
+sh run.sh configs/preprocessed/${dataset}.sh
 ```
 
 where the `${dataset}.sh` is the name of the config file. For example, 
 
 ```shell
-sh run.sh configs/countries_s3.sh
+sh run.sh configs/preprocessed/countries_s3.sh
 ```
 
 ## Testing
