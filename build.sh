@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# create python2.7 environment by Anaconda
+# add channnels to Anaconda
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
 
