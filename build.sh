@@ -11,4 +11,4 @@ conda install tqdm==4.19.4 -y
 conda install scipy -y
 
 # install & test tensorflow-gpu
-conda install tensorflow-gpu==1.13.0 -y
+conda install tensorflow-gpu==1.3.0 -y

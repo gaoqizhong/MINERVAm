@@ -541,7 +541,8 @@ if __name__ == '__main__':
     logger.info('Total number of relations {}'.format(len(options['relation_vocab'])))
     save_path = ''
     config = tf.ConfigProto()
-    config.gpu_options.allow_growth = False
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+    config.gpu_options.allow_growth = True
     config.log_device_placement = False
 
 
