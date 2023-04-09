@@ -379,6 +379,13 @@ class Trainer(object):
                     state['current_entities'])
 
 
+
+            '''gqz
+            use test-set to count index (line ...)
+            the meaning of variables is as follows:
+                final_reward_n: Hits@n
+                AP:             MRR       
+            '''
             # ask environment for final reward
             rewards = episode.get_reward()  # [B*test_rollouts]
             reward_reshape = np.reshape(rewards, (temp_batch_size, self.test_rollouts))  # [orig_batch, test_rollouts]
@@ -419,8 +426,6 @@ class Trainer(object):
                         answer_pos = sorted_answers.index(answer)
                     else:
                         answer_pos = None
-
-
                 if answer_pos != None:
                     if answer_pos < 20:
                         final_reward_20 += 1

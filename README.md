@@ -56,7 +56,7 @@ The statistics of OpenBG-IMG-M are as follows:
 
 | Dataset    | # Ent   | # Rel | # Train | # Dev | # Test |
 | ---------- | ------- | ----- | ------- | ----- | ------ |
-| OpenBG-IMG | 27,910† | 136   | 230,087 | 5,000 | 14,675 |
+| OpenBG-IMG | 27,910+ | 136   | 230,087 | 5,000 | 14,675 |
 
 ## Training
 
